@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/thumbnails/019/009/052/small_2x/red-blood-drop-icon-png.png ">
+    <title>Blood Bank Web Software</title>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- <link rel="stylesheet" href="banner.css"> -->
+    
+
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  .container {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 4px solid #ccc;
+    max-width: 1200px;
+    margin: 40px auto;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  }
+  
+  .heading {
+    background-color: #003b4d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+    margin-top: 0;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .step {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .step .icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+  
+  .step h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .step p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 15px;
+    padding: 0 10px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1f3d7a;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .btn:hover {
+    background-color: #162f5c;
+  }
+
+  /* General All */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: white;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #232E35;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+
+}
+
+header .logo span {
+    color: red;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 12px;
+    /* transition: 0.7s; */
+}
+
+header nav ul li a:hover {
+    background-color: #000000;
+    border-radius: 5px;
+    
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url("https://www.netbloodbank.com/images/search-back.jpg") no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff7d00;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero .register-btn {
+    width: 178px;
+    height: 54px;
+    /* background: linear-gradient(to right, rgba(210, 9, 9, 0.9), rgba(16, 16, 174, 0.9));
+    box-shadow: 0 6px 20px rgb(64, 37, 152);  */
+    background-image: linear-gradient(147deg, #1792e4 0%, #26cc70 85%);
+    box-shadow: 0px 4px 9px rgb(28, 166, 188);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    margin-left: 12rem;
+}
+
+.hero .register-btn:hover {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .register-btn a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.hero .register-btn button {
+    background-color: inherit;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.banner {
+    /* margin-top: 0%; */
+    height: 7rem;
+    background-color: rgb(206, 28, 28);
+}
+.banner .banner-text {
+    text-align: center;
+    margin-top: 0.4rem;
+}
+
+.banner .banner-buttons {
+    margin: 0.5rem 5rem 0.5rem 33.5rem;
+}
+
+
+.hero .conten2 {
+    margin-top: 150px;
+    margin-left: 80px;
+    height: 300px;
+    width: 570px;
+}
+
+.hero img {
+    margin-top: 13rem;
+    margin-right: 30px;
+    height: 370px;
+    width: 500px;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+/* footer */
+footer {
+    background-color: #2d2d2d; 
+    color: #fff; 
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 25rem;
+  }
+  
+  .footer-content {
+    width: 100%;
+    /* max-width: 1200px; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* gap: 80px; */
+    opacity: 0.9;
+  }
+  
+.footer-content > div ul a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-content > div ul li {
+    list-style: none;
+    line-height: 2;
+}
+
+.important-links {
+    padding-left: 10px;
+}
+
+.footer-content > div {
+    margin-left: 80px;
+}
+
+
+.contact-info p {
+    font-size: 14px;
+    line-height: 2;
+  }
+  
+  
+.footer-content > div ul li a:hover {
+    text-decoration: underline;
+    color: #ff6347;
+  }
+  
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 20px;
+  }
+  
+.social-media a:hover {
+    color: #ff6347; 
+  }
+  
+.emergency-contact p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff6347; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+#sub-footer-id {
+    margin: auto;
+}
+
+#sub-footer-id  #icons-id{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+
+}
+
+#sub-footer-id #icons-id > i {
+    margin: 3.5rem 0 1.5rem 0.7rem;
+    align-items: center;
+    cursor: grab;
+}
+
+#sub-footer-id #icons-id i:hover {
+    size: 5rem;
+    opacity: 1;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h2 { border-bottom: 2px solid red; display: inline-block; padding-bottom: 5px; }
+        .container { display: flex; justify-content: center;text-align: center; gap: 30px; flex-wrap: wrap; margin-top: 20px; }
+        .feature { width: 200px; padding: 10px; }
+        .feature img { width: 80px; }
+        p { font-size: 14px; color: gray; }
+
+/* Sidebar */
+.custom-sidebar {
+  position: fixed;
+  top: 75px;
+  left: -250px; /* Hidden by default */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  transition: left 0.3s ease;
+  padding-top: 60px;
+  z-index: 100000;
+}
+
+/* Sidebar links */
+.custom-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.custom-sidebar ul li a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+}
+
+.custom-sidebar ul li a:hover {
+  background-color: #444;
+}
+
+/* Show Sidebar when menu open */
+body.custom-menu-open .custom-sidebar {
+  left: 0;
+}
+
+.custom-sidebar ul li img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: inline;
+    margin-left: 4.7rem;
+}
+
+.custom-sidebar ul li p {
+    color: #ef0d0d;
+    display: inline;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
+
+  
+    </style>
+
+    <link rel="stylesheet" href="registration.css">
+
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer"
+      />
+
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-bars custom-menu-icon" onclick="toggleMenu()"></i>&nbsp;
+            <span>Blood</span>Bank
+          </div>
+        <nav>
+            <ul>
+                <li><a href="http://localhost:8080/bloodbank/about">About Us</a></li>
+                <li><a href="http://localhost:8080/bloodbank/contact">Contact Us</a></li>
+                <li><a href="http://localhost:8080/bloodbank/signin">Donate Blood</a></li>
+                <li><a href="http://localhost:8080/bloodbank/search">Need Blood</a></li>
+                <li><a href="http://localhost:8080/bloodbank/register">Register</a></li>
+                <li><a href="http://localhost:8080/bloodbank/login4">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sidebar HTML -->
+<div class="custom-sidebar" id="sidebar">
+    <ul>
+        <li class="one"><img src="/images/WhatsApp Image 2025-04-04 at 12.19.14_67f81c69.jpg" ><br><p><%=usernamea %></p></li>
+        <li><a href="http://localhost:8080/bloodbank/view">View Profile</a></li>
+        <li><a href="http://localhost:8080/bloodbank/edit">Edit Profile</a></li>
+        <li><a href="http://localhost:8080/bloodbank/about">Reports</a></li>
+        <li><a href="http://localhost:8080/bloodbank/chart">Dashboard</a></li>
+        <li><a href="http://localhost:8080/bloodbank">Logout</a></li>
+    </ul>
+  </div>
+
+    <section class="hero">
+       <div class="conten1">
+        <img src="https://www.netbloodbank.com/img/front-3.png" alt="image">
+       </div>
+       <div class="conten2">
+        <h1>Blood Bank Management system</h1>
+        <p style="color: #ffffff;">
+            Bloodbank is a Blood Bank Management Software on the internet. This is a great software to computerise blood bank. Information availability is not just limited to one centre. it is available worldwide once you log in to the system <span style="color: red;">&hearts;</span>
+        </p>
+        <div class="register-btn">
+            <button type="submit"></button><a href="http://localhost:8080/bloodbank/register">Register Now</a></button>
+        </div>
+       </div>
+    </section>
+
+    <div class="banner">
+        <div class="banner-text">
+            <h2>Blood bank management software - Are you Convinced ?</h2>
+        </div>
+        <div class="banner-buttons">
+            <button class="btn">Yes, I want to register</button>
+            <button class="btn">No, I want more</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="heading">How to Buy bloodbank in 3 simple steps ?</h2>
+        <div class="steps">
+          <div class="step">
+            <img src="https://www.netbloodbank.com/images/register-icon.png" alt="Register" class="icon">
+            <h3>Step 1: Register</h3>
+            <p>Register your blood bank below. Fill all the details correctly and get login credentials through e-mail from bloodbank.</p>
+            <a href="http://localhost:8080/bloodbank/signin" class="btn">Register here</a>
+          </div>
+          <div class="step">
+            <img src="https://www.netbloodbank.com/images/login.png" alt="Login" class="icon">
+            <h3>Step 2: Login</h3>
+            <p>Log into bloodbank member using the credentials and verification code which is sent to your mail.</p>
+            <a href="#" class="btn">Login here</a>
+          </div>
+          <div class="step">
+            <img src="https://www.netbloodbank.com/images/buy-step.png" alt="Buy" class="icon">
+            <h3>Step 3: Buy</h3>
+            <p>In member area, choose your plan,<br> pay the amount and activate <br> your bloodbank.</p>
+            <a href="#" class="btn">Go To Login</a>
+          </div>
+        </div>
+      </div>
+
+      <h2></h2>
+    <div class="container">
+        <div class="feature">
+            <img src="https://www.netbloodbank.com/images/nf1.png" alt="Accounting">
+            <h3>Accounting</h3>
+            <p>No need to accounting yourself. Maintains all accounts.</p>
+        </div>
+        <div class="feature">
+            <img src="https://www.netbloodbank.com/images/nf2.png" alt="Billing">
+            <h3>Billing</h3>
+            <p>Generates reporting, billing, inventory, and more.</p>
+        </div>
+        <div class="feature">
+            <img src="https://www.netbloodbank.com/images/nf3.png" alt="Fastest Execution">
+            <h3>Fastest Execution</h3>
+            <p>Lightweight LIMS, performs functions faster than ever.</p>
+        </div>
+        <div class="feature">
+            <img src="https://www.netbloodbank.com/images/nf7.png" alt="Mobile App">
+            <h3>Mobile App</h3>
+            <p>Comes with a mobile application.</p>
+        </div>
+        <div class="feature">
+            <img src="https://www.netbloodbank.com/images/nf4.png" alt="Mobile App">
+            <h3>Email & SMS Facility</h3>
+            <p>Email & SMS facility to connect with patient and doctors instantly</p>
+        </div>
+        <div class="feature">
+            <img src="https://www.netbloodbank.com/images/nf5.png" alt="Mobile App">
+            <h3>Reporting</h3>
+            <p>Reports can be send directly through email,app or SMS to physicians, consultant or even to patients thereby speeding up the patient treatment cycle.</p>
+        </div>
+        <div class="feature">
+            <img src="https://www.netbloodbank.com/images/nf6.png" alt="Mobile App">
+            <h3>Search Engine</h3>
+            <p>The first ever search engine for bloodbanks</p>
+        </div>
+        <div class="feature">
+            <img src="	https://www.netbloodbank.com/images/nf8.png" alt="Mobile App">
+            <h3>Inventory</h3>
+            <p>Netbloodbank - Blood bank management software offers inventory management</p>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-content">
+            
+            <!-- Important Links -->
+            <div class="important-links">
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+            </div>
+
+            <div class="other1">
+                <ul>
+                    <li><a href="#">Donor Registration</a></li>
+                    <li><a href="#">Request Blood</a></li>
+                    <li><a href="#">Blood Donation Centers Near You</a></li>
+                    <li><a href="#">Careers with Us</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="other2">
+                <ul>
+                    <li><a href="#">Privacy & Data Protection</a></li>
+                    <li><a href="#">Become a Volunteer</a></li>
+                    <li><a href="#">Find a Blood Donor</a></li>
+                    <li><a href="#">Online Blood Bank Registration</a></li>
+                    <li><a href="#">Corporate Partnerships</a></li>
+                    <li><a href="#">Blood Donation Camps</a></li>
+                </ul>
+            </div>
+
+            <div class="contact-info">
+                <p>Contect: +011 2553-2553</p>
+                <p>Email: bloodbank@gmail.com</p>
+                <p>Address: Anand Nagar Khandwa(M.P.)</p>
+            </div>
+
+            
+            <div class="sub-footer" id="sub-footer-id">
+                    <div class="icons" id="icons-id">
+                        <i class="fa-brands fa-facebook" ></i>
+                        <i class="fa-brands fa-instagram" ></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+
+                    <div class="emergency-contact">
+                        <p>Emergency Helpline: 123-456-7890</p>
+                        </div>
+                    
+                    <div class="copyright">
+                    <p>&copy; 2024 Blood Bank Management System. | All Rights Reserved.</p>
+                </div>
+            </div>
+
+        </div>
+</footer>
+
+<script>
+    alert("Welcome to <%=usernamea%>!");
+    function toggleMenu() {
+      document.body.classList.toggle('custom-menu-open');
+    }
+  </script>
+</body>
+</html>

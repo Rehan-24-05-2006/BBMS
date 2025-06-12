@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/thumbnails/019/009/052/small_2x/red-blood-drop-icon-png.png ">
+    <title>Blood Bank Web Software</title>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- <link rel="stylesheet" href="banner.css"> -->
+
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }  
+
+  /* General All */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: white;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #33414a;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+
+}
+
+header .logo span {
+    color: red;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 12px;
+    /* transition: 0.7s; */
+}
+
+header nav ul li a:hover {
+    background-color: #000000;
+    border-radius: 5px;
+    
+}
+
+/* main */
+
+main {
+    height: 35rem;
+    background: url('https://www.netbloodbank.com/images/search-back.jpg')no-repeat;
+}
+
+
+
+
+/* footer */
+footer {
+    background-color: #2d2d2d; 
+    color: #fff; 
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 25rem;
+  }
+  
+  .footer-content {
+    width: 100%;
+    /* max-width: 1200px; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* gap: 80px; */
+    opacity: 0.9;
+  }
+  
+.footer-content > div ul a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-content > div ul li {
+    list-style: none;
+    line-height: 2;
+}
+
+.important-links {
+    padding-left: 10px;
+}
+
+.footer-content > div {
+    margin-left: 80px;
+}
+
+
+.contact-info p {
+    font-size: 14px;
+    line-height: 2;
+  }
+  
+  
+.footer-content > div ul li a:hover {
+    text-decoration: underline;
+    color: #ff6347;
+  }
+  
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 20px;
+  }
+  
+.social-media a:hover {
+    color: #ff6347; 
+  }
+  
+.emergency-contact p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff6347; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+#sub-footer-id {
+    margin: auto;
+}
+
+#sub-footer-id  #icons-id{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+
+}
+
+#sub-footer-id #icons-id > i {
+    margin: 3.5rem 0 1.5rem 0.7rem;
+    align-items: center;
+    cursor: grab;
+}
+
+#sub-footer-id #icons-id i:hover {
+    size: 5rem;
+    opacity: 1;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* /contact/ */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.contact-section {
+  background: url('https://www.netbloodbank.com/images/search-back.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact-section h1 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.contact-box {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px 20px;
+  border-radius: 15px;
+  max-width: 300px;
+  width: 100%;
+}
+
+.contact-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.contact-box p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.contact-box a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
+
+
+/* /profilepic/ */
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* circular */
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+form > button {
+    all: unset;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 1px 8px;
+    margin-top: 1rem;
+  }
+
+form > button:hover {
+    background-color: blue;
+    box-shadow: 0px 4px 9px rgb(28, 166, 188);
+  }
+
+
+
+    </style>
+
+    <link rel="stylesheet" href="registration.css">
+
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer"
+      />
+
+</head>
+<body>
+    <header>
+        <div class="logo"><i class="fa-solid fa-bars"></i>&nbsp;<span>Blood</span>Bank</div>
+        <nav>
+          <ul>
+              <li><a href="http://localhost:8080/bloodbank/about">About Us</a></li>
+              <li><a href="http://localhost:8080/bloodbank/contact">Contact Us</a></li>
+              <li><a href="http://localhost:8080/bloodbank/signin">Donate Blood</a></li>
+              <li><a href="http://localhost:8080/bloodbank/search">Need Blood</a></li>
+              <li><a href="http://localhost:8080/bloodbank/register">Register</a></li>
+              <li><a href="http://localhost:8080/bloodbank/login4">Login</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    
+    <section class="contact-section">
+        <h1>Profile</h1>
+    
+        <div class="contact-container">
+    
+          <div class="contact-box">
+            <img src="image/aadil.jpg" class="profile-pic">
+            <h3><%=result[0].username %></h3>
+            <p>+91 <%=result[0].mobile %></p>
+            <p><%=result[0].bloodgroup %></p>
+            <p>Bag Quantity : <%=result[0].bag %></p>
+            <p><%=result[0].gender %></p>
+            <p><i class="fa-solid fa-location-dot fa-beat" style="margin-right: 10px;"></i><%=result[0].address %></p>
+            <form action="/bloodbnak/view2/<%=result[0].email %>/<%=result[0].bag %>" method="post"><Button>Buy Now</Button></form>
+          </div>
+    
+        </div>
+      </section>
+
+
+    <footer>
+        <div class="footer-content">
+            
+            <!-- Important Links -->
+            <div class="important-links">
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+            </div>
+
+            <div class="other1">
+                <ul>
+                    <li><a href="#">Donor Registration</a></li>
+                    <li><a href="#">Request Blood</a></li>
+                    <li><a href="#">Blood Donation Centers Near You</a></li>
+                    <li><a href="#">Careers with Us</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="other2">
+                <ul>
+                    <li><a href="#">Privacy & Data Protection</a></li>
+                    <li><a href="#">Become a Volunteer</a></li>
+                    <li><a href="#">Find a Blood Donor</a></li>
+                    <li><a href="#">Online Blood Bank Registration</a></li>
+                    <li><a href="#">Corporate Partnerships</a></li>
+                    <li><a href="#">Blood Donation Camps</a></li>
+                </ul>
+            </div>
+
+            <div class="contact-info">
+                <p>Contect: +011 2553-2553</p>
+                <p>Email: bloodbank@gmail.com</p>
+                <p>Address: Anand Nagar Khandwa(M.P.)</p>
+            </div>
+
+            
+            <div class="sub-footer" id="sub-footer-id">
+                    <div class="icons" id="icons-id">
+                        <i class="fa-brands fa-facebook" ></i>
+                        <i class="fa-brands fa-instagram" ></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+
+                    <div class="emergency-contact">
+                        <p>Emergency Helpline: 123-456-7890</p>
+                        </div>
+                    
+                    <div class="copyright">
+                    <p>&copy; 2024 Blood Bank Management System. | All Rights Reserved.</p>
+                </div>
+            </div>
+
+        </div>
+</footer>
+
+    
+</body>
+</html>

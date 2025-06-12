@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signin</title>
+    <link rel="stylesheet" href="">
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #282626;
+            margin: 0;
+            padding: 0;
+            background-image: url('blood1.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        div{
+            background-color: #fff;
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1{
+            text-align: center;
+            color: red;
+        }
+
+        label{
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: navy;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .inputbox:hover {
+            border-color: orange;
+        }
+
+        input[type="radio"]{
+            margin-right: 10px;
+        }
+
+        textarea{
+            resize: vertical;
+        }
+
+        button{
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            font-weight: bold;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            border: 2px solid transparent;
+        }
+
+        button:hover{
+            background-color: #218838;
+            border-color: black;
+        }
+
+        p {
+            font-weight: bold;
+            color: #000;
+        }
+
+        ::placeholder{
+            color: black;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: 2px solid underline;
+        }
+
+
+        @media(max-width: 600px){
+            div{
+                width: 90%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <form action="/bloodbank" method="post">
+            <div>
+                <h1>Doner Form</h1>
+                <label for="name">Username :</label>
+                <input type="text" name="username" id="name" placeholder="enter your name" required class="inputbox">
+                <label for="phone">Mobile No. :</label>
+                <input type="tel" name="mobile" id="phone" placeholder="enter your number" required class="inputbox">
+                <label for="age">Age :</label>
+                <input type="number" name="age" id="age" placeholder="enter your age" required class="inputbox">
+                <label for="email">Email Id :</label>
+                <input type="email" name="email" id="email" placeholder="enter your email" required class="inputbox">
+                <label for="password">Password :</label>
+                <input type="password" name="password" id="password" placeholder="enter password" required class="inputbox">
+                <label for="bloodgroup">Blood Group :</label>
+                <select name="bloodgroup" id="bloodgroup" class="inputbox">
+                    <option value="">select your blood group</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+                <label for="bag">Blood units :
+                    <input type="number" min="0" max="10" step="1" name="bag" id="bag" value="bag">
+                </label>
+                <label for="gender">Gender :</label>
+                <label for="101">
+                    <input type="radio" name="gender" id="101" value="male" >Male
+                </label>
+                <label for="102">
+                    <input type="radio" name="gender" id="102" value="female">Female
+                </label>
+                <label for="address">Address :</label>
+                <textarea name="address" id="address" rows="5" placeholder="enter your address" required class="inputbox"></textarea>
+                <button type="submit">Register</button>
+                <p>Already have an account? <a href="http://localhost:8080/bloodbank/login" target="_blank">login</a></p>
+            </div>
+    </form>
+</body>
+</html>

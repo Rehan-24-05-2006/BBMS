@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(50, 50, 50);
+    margin: 0;
+    padding: 0;
+    background-image: url('blood1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div {
+    background-color: #fff;
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h3 {
+    color: #000;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: navy;
+    padding: 10px;
+}
+
+
+.bloodbag {
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.bloodbag:hover {
+    border-color: orange;
+}
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #ccc;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}    
+
+button:hover {
+    border-color: black;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <h3>Donate Blood Bag</h3>
+        <label for="bag">Bottal Quantity :
+            <input type="number" min="0" max="10" step="1" name="bag" id="bag" value="bag" required class="bloodbag">
+        </label>
+        <button onclick="navigateToHome()">Submit</button>
+    </div>
+</body>
+</html>

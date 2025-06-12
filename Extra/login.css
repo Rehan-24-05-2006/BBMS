@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+.login-container {
+    display: flex;
+    width: 50%;
+    margin: 0px -15px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 80px 0px;
+    box-sizing: border-box;
+}
+
+.left-panel {
+    width: 25%;
+    background: url('./images/dark-back.jpg') no-repeat center center/cover;
+    padding: 30px;
+    margin-left: 25%;
+    background-size: cover;
+    color: white;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    box-sizing: border-box;
+
+}
+
+.left-panel h2 {
+    color: white;
+}
+
+.left-panel p, .left-panel ul {
+    color: white;
+    margin-top: 20px;
+}
+
+.left-panel ul {
+    padding-left: 20px;
+}
+
+.left-panel .logo {
+    position: absolute;
+    bottom: 20px;
+}
+
+.left-panel .logo h3 {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.right-panel {
+    width: 50%;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1e3d7b;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #163263;
+}
+
+.links {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.links a {
+    color: #1e3d7b;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}

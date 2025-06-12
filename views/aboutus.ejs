@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/thumbnails/019/009/052/small_2x/red-blood-drop-icon-png.png ">
+    <title>Blood Bank Web Software</title>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- <link rel="stylesheet" href="banner.css"> -->
+
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }  
+
+  /* General All */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: white;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #33414a;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+
+}
+
+header .logo span {
+    color: red;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 12px;
+    /* transition: 0.7s; */
+}
+
+header nav ul li a:hover {
+    background-color: #000000;
+    border-radius: 5px;
+    
+}
+
+
+
+
+
+
+/* footer */
+footer {
+    background-color: #2d2d2d; 
+    color: #fff; 
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 25rem;
+  }
+  
+  .footer-content {
+    width: 100%;
+    /* max-width: 1200px; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* gap: 80px; */
+    opacity: 0.9;
+  }
+  
+.footer-content > div ul a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-content > div ul li {
+    list-style: none;
+    line-height: 2;
+}
+
+.important-links {
+    padding-left: 10px;
+}
+
+.footer-content > div {
+    margin-left: 80px;
+}
+
+
+.contact-info p {
+    font-size: 14px;
+    line-height: 2;
+  }
+  
+  
+.footer-content > div ul li a:hover {
+    text-decoration: underline;
+    color: #ff6347;
+  }
+  
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 20px;
+  }
+  
+.social-media a:hover {
+    color: #ff6347; 
+  }
+  
+.emergency-contact p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff6347; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+#sub-footer-id {
+    margin: auto;
+}
+
+#sub-footer-id  #icons-id{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+
+}
+
+#sub-footer-id #icons-id > i {
+    margin: 3.5rem 0 1.5rem 0.7rem;
+    align-items: center;
+    cursor: grab;
+}
+
+#sub-footer-id #icons-id i:hover {
+    size: 5rem;
+    opacity: 1;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*container1*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f3f3f3;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+}
+
+.left {
+  flex: 1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo h2 {
+  font-size: 22px;
+}
+
+.logo span {
+  color: red;
+}
+
+.left h1 {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.left p {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.right {
+    margin-top: 40px;
+}
+
+.right img {
+    width: 500px;
+    height: 500px;
+}
+
+
+/*container2*/
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+.features-section {
+  padding: 40px 60px;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 35px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.feature-card img {
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/*BloodBankPlan*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+}
+
+.plans-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.plans-section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.plans-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  background: linear-gradient(to bottom, #014f86, #00b4d8);
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+.plan-card {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 20px;
+  width: 220px;
+  position: relative;
+}
+
+.plan-card h3 {
+  font-size: 18px;
+  color: #00e0d0;
+}
+
+.plan-card .duration {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.plan-card .price {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.plan-card .per {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  font-size: 14px;
+}
+
+.plan-card li {
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.plan-card button {
+  background-color: #001f54;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.plan-card button:hover {
+  background-color: #003566;
+}
+
+.recommended {
+  border: 2px solid red;
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: red;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+
+
+
+
+
+    </style>
+
+    <link rel="stylesheet" href="registration.css">
+
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer"
+      />
+
+</head>
+<body>
+    <header>
+        <div class="logo"><i class="fa-solid fa-bars"></i>&nbsp;<span>Blood</span>Bank</div>
+        <nav>
+          <ul>
+              <li><a href="http://localhost:8080/bloodbank/about">About Us</a></li>
+              <li><a href="http://localhost:8080/bloodbank/contact">Contact Us</a></li>
+              <li><a href="http://localhost:8080/bloodbank/signin">Donate Blood</a></li>
+              <li><a href="http://localhost:8080/bloodbank/search">Need Blood</a></li>
+              <li><a href="http://localhost:8080/bloodbank/register">Register</a></li>
+              <li><a href="http://localhost:8080/bloodbank/login4">Login</a></li>
+          </ul>
+      </nav>
+    </header>
+
+        <div class="container">
+          <div class="left">
+            <div class="logo">
+              <img src="blood-logo.png" alt=" Blood Bank Logo" />
+              <h2>Net <span>Blood</span> Bank</h2>
+            </div>
+            <h1>The BloodBank - Web based blood bank software</h1>
+            <p>
+              As the name suggests, the ‘BloodBank’ is <strong>Blood bank management software</strong> on the internet.
+              This is the great software to computerize blood bank operations. Information availability is not just limited
+              to one centre. BloodBank manages all your branches using single login system. It helps blood banks to prepare
+              all its registers like Master Register, Donor Register, Issue Register etc. There are more than 50+ registers
+              are generated through this software. It computerizes Reporting, Billing, Inventory, Accounting functions of any
+              Small & Large Blood bank.
+            </p>
+            <p>
+              We guarantee that we never compromise on our quality standards. BloodBank - Blood bank management system is
+              one of the <strong>best Blood Bank Management Software</strong> available in the market today. This software
+              is available over the cloud-based platform making it available anywhere, any time.
+            </p>
+          </div>
+          <div class="right">
+            <img src="https://www.netbloodbank.com/images/plan-pic.png" alt="search">
+          </div>
+        </div>
+
+        <section class="features-section">
+            <h2>BloodBank Features</h2>
+            <div class="features-grid">
+              <div class="feature-card">
+                <img src="https://www.netbloodbank.com/images/icons/database.png" alt="Database Management" />
+                <p>Accurate database record management, detailed blood bag database & detailed donor database.</p>
+              </div>
+              <div class="feature-card">
+                <img src="https://www.netbloodbank.com/images/icons/search.png" alt="Search Facility" />
+                <p>Search facilities by donor, patient, doctor, blood bag, and other recognition clues.</p>
+              </div>
+              <div class="feature-card">
+                <img src="https://www.netbloodbank.com/images/icons/shield.png" alt="Cross Matching" />
+                <p>Faster response time and better control, blood cross matching and result storing facility.</p>
+              </div>
+              <div class="feature-card">
+                <img src="https://www.netbloodbank.com/images/icons/speedometer.png" alt="Customization" />
+                <p>Customization makes it dynamic software, barcode scanning and printing available as an option.</p>
+              </div>
+              <div class="feature-card">
+                <img src="https://www.netbloodbank.com/images/icons/automatic-flash.png" alt="SMS Feature" />
+                <p>Sends auto-SMS like testing report, post-donation wish, birthday wish etc., interface with testing machines.</p>
+              </div>
+              <div class="feature-card">
+                <img src="https://www.netbloodbank.com/images/icons/adhaar.png" alt="Aadhaar Integration" />
+                <p>The software is linked with aadhar card and displays info in various forms in the software.</p>
+              </div>
+              <div class="feature-card">
+                <img src="https://www.netbloodbank.com/images/icons/report.png" alt="Reports" />
+                <p>Exhaustive report formats and registers, patient billing, income report, and printing support.</p>
+              </div>
+              <div class="feature-card">
+                <img src="https://www.netbloodbank.com/images/icons/piggy-bank.png" alt="Low Cost" />
+                <p>Low initial outlay - low cost investment, long term benefits and savings.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="plans-section">
+            <h2>BloodBank Plans</h2>
+        
+            <div class="plans-container">
+              <!-- Plan 1 -->
+              <div class="plan-card">
+                <h3>Monthly Based</h3>
+                <p class="duration">1 Month</p>
+                <p class="price">4500 INR</p>
+                <p class="per">per Month</p>
+                <ul>
+                  <li>🗄️ Database Driven</li>
+                  <li>🔐 Blood Bag Database</li>
+                  <li>👨‍⚕️ Patient's Database</li>
+                  <li>📦 Inventory Management</li>
+                </ul>
+                <button>Buy Now</button>
+              </div>
+        
+              <!-- Plan 2 -->
+              <div class="plan-card">
+                <h3>Quarterly Based</h3>
+                <p class="duration">3 Months</p>
+                <p class="price">12,000 INR</p>
+                <p class="per">per Quarter Year</p>
+                <ul>
+                  <li>🗄️ Database Driven</li>
+                  <li>🔐 Blood Bag Database</li>
+                  <li>👨‍⚕️ Patient's Database</li>
+                  <li>📦 Inventory Management</li>
+                </ul>
+                <button>Buy Now</button>
+              </div>
+        
+              <!-- Plan 3 -->
+              <div class="plan-card">
+                <h3>Half-Yearly Based</h3>
+                <p class="duration">6 Months</p>
+                <p class="price">21,000 INR</p>
+                <p class="per">per Half Year</p>
+                <ul>
+                  <li>🗄️ Database Driven</li>
+                  <li>🔐 Blood Bag Database</li>
+                  <li>👨‍⚕️ Patient's Database</li>
+                  <li>📦 Inventory Management</li>
+                </ul>
+                <button>Buy Now</button>
+              </div>
+        
+              <!-- Plan 4 -->
+              <div class="plan-card">
+                <h3>Yearly Based</h3>
+                <p class="duration">1 Year</p>
+                <p class="price">36,000 INR</p>
+                <p class="per">per Year</p>
+                <ul>
+                  <li>🗄️ Database Driven</li>
+                  <li>🔐 Blood Bag Database</li>
+                  <li>👨‍⚕️ Patient's Database</li>
+                  <li>📦 Inventory Management</li>
+                </ul>
+                <button>Buy Now</button>
+              </div>
+        
+              <!-- Plan 5 -->
+              <div class="plan-card recommended">
+                <span class="badge">Recommended</span>
+                <h3>3 Yearly Based</h3>
+                <p class="duration">3 Years</p>
+                <p class="price">1,00,000 INR</p>
+                <p class="per">per 3 Years</p>
+                <ul>
+                  <li>🗄️ Database Driven</li>
+                  <li>🔐 Blood Bag Database</li>
+                  <li>👨‍⚕️ Patient's Database</li>
+                  <li>📦 Inventory Management</li>
+                </ul>
+                <button>Buy Now</button>
+              </div>
+        
+            </div>
+          </section>
+
+
+    <footer>
+        <div class="footer-content">
+            
+            <!-- Important Links -->
+            <div class="important-links">
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+            </div>
+
+            <div class="other1">
+                <ul>
+                    <li><a href="#">Donor Registration</a></li>
+                    <li><a href="#">Request Blood</a></li>
+                    <li><a href="#">Blood Donation Centers Near You</a></li>
+                    <li><a href="#">Careers with Us</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="other2">
+                <ul>
+                    <li><a href="#">Privacy & Data Protection</a></li>
+                    <li><a href="#">Become a Volunteer</a></li>
+                    <li><a href="#">Find a Blood Donor</a></li>
+                    <li><a href="#">Online Blood Bank Registration</a></li>
+                    <li><a href="#">Corporate Partnerships</a></li>
+                    <li><a href="#">Blood Donation Camps</a></li>
+                </ul>
+            </div>
+
+            <div class="contact-info">
+                <p>Contect: +011 2553-2553</p>
+                <p>Email: bloodbank@gmail.com</p>
+                <p>Address: Anand Nagar Khandwa(M.P.)</p>
+            </div>
+
+            
+            <div class="sub-footer" id="sub-footer-id">
+                    <div class="icons" id="icons-id">
+                        <i class="fa-brands fa-facebook" ></i>
+                        <i class="fa-brands fa-instagram" ></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+
+                    <div class="emergency-contact">
+                        <p>Emergency Helpline: 123-456-7890</p>
+                        </div>
+                    
+                    <div class="copyright">
+                    <p>&copy; 2024 Blood Bank Management System. | All Rights Reserved.</p>
+                </div>
+            </div>
+
+        </div>
+</footer>
+
+    
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Group Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f0f2f5;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        h2 {
+            margin-bottom: 25px;
+            color: #333;
+            font-size: 28px;
+        }
+
+        .chart-container {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 700px;
+        }
+
+        canvas {
+            width: 100% !important;
+            height: 400px !important;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Blood Group Bag Distribution</h2>
+<div class="chart-container">
+    <canvas id="bloodGroupChart"></canvas>
+</div>
+
+<script>
+    let bloodChart;
+
+    function renderChart(data) {
+        const bloodGroups = ['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'];
+        const counts = bloodGroups.map(bg => {
+            const group = data.find(item => item.bloodgroup === bg);
+            return group ? group.totalBags : 0;
+        });
+
+        const ctx = document.getElementById('bloodGroupChart').getContext('2d');
+
+        if (bloodChart) {
+            bloodChart.data.datasets[0].data = counts;
+            bloodChart.update();
+        } else {
+            bloodChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: bloodGroups,
+                    datasets: [{
+                        label: 'Total Bags',
+                        data: counts,
+                        backgroundColor: [
+                            '#f94144', '#f3722c', '#f8961e', '#f9c74f',
+                            '#90be6d', '#43aa8b', '#577590', '#277da1'
+                        ],
+                        borderRadius: 10
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                color: '#333',
+                                font: { size: 14 }
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                color: '#333',
+                                font: { size: 14 }
+                            }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let group = context.label;
+                                    let quantity = context.parsed.y;
+                                    return `Blood Group: ${group} | Bags: ${quantity}`;
+                                }
+                            }
+                        },
+                        legend: {
+                            labels: {
+                                color: '#444',
+                                font: { size: 14 }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    }
+
+    // Initial render
+    renderChart(<%- JSON.stringify(data) %>);
+
+    // Auto-refresh every 5 seconds
+    setInterval(() => {
+        fetch('/api/bloodgroup-data')
+            .then(response => response.json())
+            .then(newData => {
+                renderChart(newData);
+            });
+    }, 5000);
+</script>
+
+</body>
+</html>
